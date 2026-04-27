@@ -30,7 +30,7 @@ This makes rapid, reusable interplanetary travel (Mars in months), asteroid mini
 Full mathematical proof, coupling term, and two complete Python models are included.
 
 Contents
-•  The-Expansion-Harmony-Window-Master.md — Complete book with Scientist Letter, all chapters, Epilogue, and Appendices
+•  The-Expansion-Harmony-Window.md — Complete book with Scientist Letter, all chapters, Epilogue, and Appendices
 •  expansion_control_kernel.py — Core AI control kernel
 •  rich_expansion_propulsion_model.py — Richer industrial-scale model with true self-reinforcement
 
