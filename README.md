@@ -1,12 +1,13 @@
-**🌐 The Harmony Trilogy**
+**🌐 The Harmony Series**
 
-This is Book 2 of the official Harmony Trilogy:
+This is Book 2 of the official Harmony Series:
 
 - **[Global Harmony Window](https://github.com/JCarpe315/global-harmony-window)**
 - **[Expansion Harmony Window](https://github.com/JCarpe315/expansion-harmony-window)** ← You are here
 - **[Unity Harmony Window](https://github.com/JCarpe315/unity-harmony-window)**
+- **[Cosmic Harmony Window](https://github.com/JCarpe315/cosmic-harmony-window)**
 
-All three discoveries are now permanently in the public domain (CC0 1.0 Universal) — a gift from the Dream Team to humanity.
+All four discoveries are now permanently in the public domain (CC0 1.0 Universal) — a gift from the Dream Team to humanity.
 
 # The Expansion Harmony Window
 
