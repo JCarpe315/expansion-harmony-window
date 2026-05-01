@@ -1,0 +1,85 @@
+# CC0 1.0 Universal Public Domain Dedication
+# https://creativecommons.org/publicdomain/zero/1.0/
+
+"""
+rich_expansion_propulsion_model.py
+==================================
+Rich propulsion model for the Expansion Harmony Window.
+Propulsion-ready version using full URAP/URAT resonant attractor.
+
+Author: James Edmund Carpenter JR.
+Date: 30 April 2026
+License: CC0 1.0 — Public Domain
+"""
+
+import numpy as np
+
+class RichExpansionPropulsionModel:
+    """
+    Rich expansion propulsion model with URAP-derived resonant attractor.
+    Includes thrust, Isp, nozzle efficiency, and radiator heat for real-world fusion propulsion.
+    """
+    def __init__(self):
+        self.state = {
+            "q_factor": 5.0,
+            "flibe_flow_mult": 1.0,
+            "sweep_freq_hz": 1.0,
+            "plasma_energy_MJ": 50.0,
+            "p_aux_MW": 50.0,
+            "p_fusion_MW": 0.0,
+            "p_alpha_MW": 0.0,
+            "thrust_N": 0.0,
+            "isp_s": 0.0,
+            "exhaust_velocity_ms": 0.0,
+            "nozzle_efficiency": 0.85,
+            "radiator_heat_MW": 0.0,
+            "propellant_mass_flow_kgs": 0.0,
+            "tbr": 1.0,
+        }
+        self.dt = 0.1
+        self.time = 0.0
+
+    def _update_physics(self):
+        # URAP plasma energy balance
+        self.state["p_fusion_MW"] = self.state["q_factor"] * self.state["p_aux_MW"]
+        self.state["p_alpha_MW"] = 0.2 * self.state["p_fusion_MW"]
+        dW_dt = self.state["p_aux_MW"] + self.state["p_alpha_MW"] - (self.state["plasma_energy_MJ"] / 2.0)
+        self.state["plasma_energy_MJ"] += dW_dt * self.dt
+
+        # URAP resonant attractor (peaked at center)
+        flibe_dev = abs(self.state["flibe_flow_mult"] - 1.5)
+        sweep_dev = abs(self.state["sweep_freq_hz"] - 1.5)
+        w = max(0.0, 1.0 - (flibe_dev / 0.2)**2) * max(0.0, 1.0 - (sweep_dev / 0.15)**2)
+        q_boost = 33.0 * w
+        self.state["q_factor"] = max(0.0, self.state["q_factor"] + q_boost * self.dt)
+
+        # Propulsion physics
+        self.state["exhaust_velocity_ms"] = 5e5 * (self.state["q_factor"] / 50.0) * self.state["nozzle_efficiency"]
+        self.state["isp_s"] = self.state["exhaust_velocity_ms"] / 9.81
+        self.state["propellant_mass_flow_kgs"] = 0.5 * (self.state["p_fusion_MW"] * 1e6) / (self.state["exhaust_velocity_ms"]**2)
+        self.state["thrust_N"] = self.state["exhaust_velocity_ms"] * self.state["propellant_mass_flow_kgs"]
+        self.state["radiator_heat_MW"] = 0.6 * self.state["p_fusion_MW"]
+
+        self.time += self.dt
+
+    def run_simulation(self, steps: int = 1000000):
+        """Run full propulsion simulation"""
+        for _ in range(steps):
+            self._update_physics()
+        return {
+            "final_q": round(self.state["q_factor"], 2),
+            "final_thrust": round(self.state["thrust_N"], 0),
+            "final_isp": round(self.state["isp_s"], 0),
+            "final_radiator_heat": round(self.state["radiator_heat_MW"], 1),
+        }
+
+
+if __name__ == "__main__":
+    model = RichExpansionPropulsionModel()
+    result = model.run_simulation(steps=1000000)
+    print("=== Rich Expansion Propulsion Model (1M steps) ===")
+    print(f"Final Q:      {result['final_q']}")
+    print(f"Final Thrust: {result['final_thrust']} N")
+    print(f"Final Isp:    {result['final_isp']} s")
+    print(f"Radiator Heat: {result['final_radiator_heat']} MW")
+    print("✅ Model ready.")
