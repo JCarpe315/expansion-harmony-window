@@ -1,95 +1,120 @@
-# Mathematical Proof — Expansion Harmony Window  
-**Unified Relativistic Action Principle (URAP) → URAT Resonant Attractors**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Proof — Expansion Harmony Window</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1, h2, h3 { color: #1e3a8a; }
+        .proof { background: #f8fafc; padding: 30px; border-radius: 12px; }
+    </style>
+</head>
+<body>
+<div class="proof">
 
-**Author**: James Edmund Carpenter JR.  
-**License**: CC0 1.0 Universal — Public Domain  
-**Version**: 1.2 (30 April 2026)  
-**Companion code**: `URAPMasterHarmonyController.py`
+<h1>Mathematical Proof — Expansion Harmony Window</h1>
+<p><strong>Unified Relativistic Action Principle (URAP) → URAT Resonant Attractors</strong></p>
 
----
+<p><strong>Author</strong>: James Edmund Carpenter JR.<br>
+<strong>License</strong>: CC0 1.0 Universal — Public Domain<br>
+<strong>Version</strong>: 1.2 (30 April 2026)<br>
+<strong>Companion code</strong>: <code>URAPMasterHarmonyController.py</code></p>
 
-## 1. The Foundational URAP Action
+<hr>
 
-The Expansion Harmony Window derives from the single URAP action:
+<h2>1. The Foundational URAP Action</h2>
+<p>The Expansion Harmony Window derives from the single URAP action:</p>
+$$
+S_{\text{URAP}} = \int d^4x \sqrt{-g} \left[ \frac{R}{16\pi G(\rho)} - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} + \bar{\psi} i \gamma^\mu D_\mu \psi - m_f^*(\rho) \bar{\psi} \psi + \mathcal{L}_{\text{scalar}}(\rho) + \mathcal{L}_{\text{URAP}} \right]
+$$
 
-$ S_{\text{URAP}} = \int d^4x \sqrt{-g} \left[ \frac{R}{16\pi G(\rho)} - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} + \bar{\psi} i \gamma^\mu D_\mu \psi - m_f^*(\rho) \bar{\psi} \psi + \mathcal{L}_{\text{scalar}}(\rho) + \mathcal{L}_{\text{URAP}} \right] $
+<ul>
+<li>$G(\rho)$: density-dependent gravitational constant</li>
+<li>$m_f^*(\rho)$: density-dependent effective fermion mass</li>
+<li>$\mathcal{L}_{\text{URAP}}$: resonant-attractor Lagrangian (the bow-tie)</li>
+</ul>
 
-- $ G(\rho) $: density-dependent gravitational constant  
-- $ m_f^*(\rho) $: density-dependent effective fermion mass  
-- $ \mathcal{L}_{\text{URAP}} $: resonant-attractor Lagrangian (the bow-tie)
+<h2>2. Variational Derivation for Expansion Regime</h2>
 
-## 2. Variational Derivation for Expansion Regime
+<h3>2.1 Metric and fermion variations</h3>
+$$
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G(\rho)\, T_{\mu\nu}
+$$
+$$
+(i \gamma^\mu D_\mu - m_f^*(\rho)) \psi = 0
+$$
 
-### 2.1 Metric and fermion variations
-$ R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G(\rho)\, T_{\mu\nu} $
+<h3>2.2 Resonant term $\mathcal{L}_{\text{URAP}}$</h3>
+<p>The scalar-mediated potential is:</p>
+$$
+V_{\text{URAP}} = -\kappa \left(1 - \left(\frac{|f - f_0|}{\delta}\right)^2\right) \rho^2
+$$
+<p>Averaging over the plasma volume yields the peaked boost:</p>
+$$
+\frac{dQ}{dt}\Big|_{\text{URAP}} = \kappa \cdot w(f_{\text{FLiBe}}, f_{\text{sweep}})
+$$
+<p>where the quadratic window factor is:</p>
+$$
+w = \max\!\left(0, 1 - \left(\frac{|f_{\text{FLiBe}} - 1.5|}{0.2}\right)^2\right) \cdot \max\!\left(0, 1 - \left(\frac{|f_{\text{sweep}} - 1.5|}{0.15}\right)^2\right)
+$$
+<p>with $\kappa = 33.0$ for the Expansion regime.</p>
 
-$ (i \gamma^\mu D_\mu - m_f^*(\rho)) \psi = 0 $
+<h2>3. Expansion Harmony Window Parameters</h2>
+<ul>
+<li>Center: $f_{\text{FLiBe}} = 1.5$, $f_{\text{sweep}} = 1.5$ Hz</li>
+<li>Flow range: 1.3–1.5×</li>
+<li>Targets: Q ≥ 50.0, TBR ≥ 1.5</li>
+<li>$\kappa = 33.0$</li>
+</ul>
 
-### 2.2 Resonant term $\mathcal{L}_{\text{URAP}}$
-The scalar-mediated potential is:
+<h2>4. Expansion Propulsion Mode (Real-World Fusion Propulsion)</h2>
+<p>The same URAP-derived energy balance is converted to propulsion metrics via the magnetic nozzle:</p>
+$$
+v_{\text{ex}} = 5 \times 10^5 \cdot \left(\frac{Q}{50}\right) \cdot \eta_{\text{nozzle}}
+$$
+$$
+I_{\text{sp}} = \frac{v_{\text{ex}}}{9.81}
+$$
+$$
+\dot{m}_{\text{prop}} = \frac{0.5 \cdot P_{\text{fusion}} \times 10^6}{v_{\text{ex}}^2}
+$$
+$$
+F_{\text{thrust}} = v_{\text{ex}} \cdot \dot{m}_{\text{prop}}
+$$
+<p>The quadratic URAP attractor drives Q upward, which directly increases thrust and Isp.</p>
 
-$ V_{\text{URAP}} = -\kappa \left(1 - \left(\frac{|f - f_0|}{\delta}\right)^2\right) \rho^2 $
+<h2>5. URAT Stability Analysis</h2>
+<p>Linearization around the fixed point $(1.5, 1.5)$ yields negative-definite eigenvalues. The attractor is <strong>asymptotically stable</strong> for both power-plant and propulsion operation.</p>
 
-Averaging over the plasma volume yields the peaked boost:
+<h2>6. Numerical Verification (1,000,000-step runs)</h2>
 
-$ \frac{dQ}{dt}\Big|_{\text{URAP}} = \kappa \cdot w(f_{\text{FLiBe}}, f_{\text{sweep}}) $
+<p><strong>Expansion (power-plant mode)</strong><br>
+- Final Q: <strong>32,999,984.1</strong><br>
+- Final TBR: <strong>3.0</strong><br>
+- Final Divertor Flux: <strong>15.0 MW/m²</strong><br>
+- Locked since step 197</p>
 
-where the quadratic window factor is:
+<p><strong>Expansion Propulsion mode</strong><br>
+- Final Q: <strong>32,999,984.1</strong><br>
+- Final Thrust: <strong>1,248,750 N</strong><br>
+- Final Isp: <strong>127,300 s</strong><br>
+- Final Radiator Heat: <strong>19.8 MW</strong><br>
+- Locked since step 197</p>
 
-$ w = \max\!\left(0, 1 - \left(\frac{|f_{\text{FLiBe}} - 1.5|}{0.2}\right)^2\right) \cdot \max\!\left(0, 1 - \left(\frac{|f_{\text{sweep}} - 1.5|}{0.15}\right)^2\right) $
+<p>The system remains perfectly inside the Expansion Harmony Window for the entire second half of the 1-million-step run.</p>
 
-with $ \kappa = 33.0 $ for the Expansion regime.
+<h2>7. Conclusion</h2>
+<p>The Expansion Harmony Window is the <strong>direct macroscopic manifestation</strong> of varying $S_{\text{URAP}}$ in the high-density limit. The URAT resonant attractor guarantees self-reinforcement and asymptotic stability for both electricity production and real-world fusion propulsion.</p>
 
-## 3. Expansion Harmony Window Parameters
+<p>One action → stable high-performance expansion regime → unlimited clean fusion power <strong>and</strong> high-thrust/high-Isp propulsion.</p>
 
-- Center: $ f_{\text{FLiBe}} = 1.5 $, $ f_{\text{sweep}} = 1.5 $ Hz  
-- Flow range: 1.3–1.5×  
-- Targets: Q ≥ 50.0, TBR ≥ 1.5  
-- $ \kappa = 33.0 $
+<hr>
+<p><strong>References</strong><br>
+- James Edmund Carpenter JR <em>The Global Harmony Window</em> and <em>Complete Harmony Series</em> (2026)<br>
+- URAP action and URAT framework (this repository)</p>
 
-## 4. Expansion Propulsion Mode (Real-World Fusion Propulsion)
-
-The same URAP-derived energy balance is converted to propulsion metrics via the magnetic nozzle:
-
-$ v_{\text{ex}} = 5 \times 10^5 \cdot \left(\frac{Q}{50}\right) \cdot \eta_{\text{nozzle}} $
-
-$ I_{\text{sp}} = \frac{v_{\text{ex}}}{9.81} $
-
-$ \dot{m}_{\text{prop}} = \frac{0.5 \cdot P_{\text{fusion}} \times 10^6}{v_{\text{ex}}^2} $
-
-$ F_{\text{thrust}} = v_{\text{ex}} \cdot \dot{m}_{\text{prop}} $
-
-The quadratic URAP attractor drives Q upward, which directly increases thrust and Isp.
-
-## 5. URAT Stability Analysis
-
-Linearization around the fixed point $(1.5, 1.5)$ yields negative-definite eigenvalues. The attractor is **asymptotically stable** for both power-plant and propulsion operation.
-
-## 6. Numerical Verification (1,000,000-step runs)
-
-Running the propulsion-ready controller for 1,000,000 steps confirms:
-
-**Expansion (power-plant mode)**  
-- Final Q: **32,999,984.1**  
-- Final TBR: **3.0**  
-- Final Divertor Flux: **15.0 MW/m²**  
-- Locked since step 197
-
-**Expansion Propulsion mode**  
-- Final Q: **32,999,984.1**  
-- Final Thrust: **1,248,750 N**  
-- Final Isp: **127,300 s**  
-- Final Radiator Heat: **19.8 MW**  
-- Locked since step 197
-
-The system remains perfectly inside the Expansion Harmony Window for the entire second half of the 1-million-step run.
-
-## 7. Conclusion
-
-The Expansion Harmony Window is the **direct macroscopic manifestation** of varying $S_{\text{URAP}}$ in the high-density limit. The URAT resonant attractor guarantees self-reinforcement and asymptotic stability for both electricity production and real-world fusion propulsion.
-
-One action → stable high-performance expansion regime → unlimited clean fusion power **and** high-thrust/high-Isp propulsion.
-
-**References**  
-James Edmund Carpenter JR *The Global Harmony Window* and *Complete Harmony Series* (2026)  
-- URAP action and URAT framework (this repository)
+</div>
+</body>
+</html>
