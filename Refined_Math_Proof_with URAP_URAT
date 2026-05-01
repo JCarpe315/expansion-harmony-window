@@ -16,10 +16,6 @@ $$
 S_{\text{URAP}} = \int d^4x \sqrt{-g} \left[ \frac{R}{16\pi G(\rho)} - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} + \bar{\psi} i \gamma^\mu D_\mu \psi - m_f^*(\rho) \bar{\psi} \psi + \mathcal{L}_{\text{scalar}}(\rho) + \mathcal{L}_{\text{URAP}} \right]
 $$
 
-- \(G(\rho)\): density-dependent gravitational constant  
-- \(m_f^*(\rho)\): density-dependent effective fermion mass  
-- \(\mathcal{L}_{\text{URAP}}\): resonant-attractor Lagrangian (the bow-tie)
-
 ## 2. Variational Derivation for Expansion Regime
 
 ### 2.1 Metric and fermion variations
