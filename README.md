@@ -1,6 +1,6 @@
 # The Expansion Harmony Window
 
-All work done by AI-SuperGrok
+This is a work created by Grok XAI. Be skeptical.
 
 **CC0 1.0 Universal Public Domain Dedication**  
 [![CC0](https://img.shields.io/badge/License-CC0--1.0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
